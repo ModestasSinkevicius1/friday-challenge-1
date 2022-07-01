@@ -72,6 +72,12 @@
     color:white;
 }
 
+.nav-container:hover .nav-img-2,
+.nav-container:hover .nav-img-3{
+    margin-left: 6px;
+    
+}
+
 .nav-link{
     display: flex;
     width: 100%;
