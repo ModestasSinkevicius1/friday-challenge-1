@@ -1,72 +1,12 @@
-@import './style/layout.css';
-
 :root{
     --primary-color:#EBEEF5;
     --secondary-color:#F7F6FF;
+    --element-color:#C4C4C4;
+    --custom-font-color:#02577A;
 }
 
-body {
+body{
+    margin: 0;
     font-family: sans-serif;
     background-color: var(--primary-color);
-}
-
-footer.container{
-    text-align: center;
-    border-top: 2px solid black;
-    width: 346px;
-    margin-left: calc((100% - 346px)/2);
-}
-
-.nav-container{
-    transition: all 1s ease;
-    overflow: hidden;
-}
-
-.nav-container, .nav-line{
-    transition: all 1s ease;
-}
-
-.nav-link{
-    transition: all 1s ease;
-}
-
-.nav-container p{
-    margin: 0;
-    margin: 0 0 0 16px;
-    display: none;
-}
-
-.nav-container:hover{
-    width: 206px;
-}
-
-.nav-container:hover p{
-    display: block;
-}
-
-.nav-container:hover .nav-link{
-    justify-content: flex-start;
-}
-
-.nav-container:hover .nav-link-1{
-    margin-left: 37px;
-}
-
-.nav-container:hover .nav-line{
-    width: 128px;
-}
-
-.nav-link{
-    display: flex;
-    width: 100%;
-    justify-content: center;  
-}
-
-.home{
-    background-color: #FFFF;
-    border-radius: 99px 0 0 99px;
-    padding: 16px 32px;
-    box-sizing: border-box;
-    justify-content: center;
-    margin-left: 20px;
 }
