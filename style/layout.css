@@ -35,6 +35,7 @@
 
 .nav-container:hover .nav-link{
     justify-content: flex-start;
+    align-items: center;
 }
 
 .nav-container:hover .nav-link-1{
@@ -74,7 +75,7 @@
 
 .nav-container:hover .nav-img-2,
 .nav-container:hover .nav-img-3{
-    margin-left: 6px;
+    margin-left: 7px;
     
 }
 
