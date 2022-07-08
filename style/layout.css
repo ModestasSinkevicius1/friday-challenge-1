@@ -88,7 +88,9 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    align-self: normal;  
+    align-self: normal;
+    color: black;
+    text-decoration: none;
 }
 
 .home{
@@ -119,12 +121,19 @@ nav.nav-container{
 }
 
 footer.container{
-    width: 100%;
-    position:absolute;
-    bottom: 0;
     text-align: center;
     border-top: 2px solid var(--custom-font-color);
     width: 346px;
     margin-left: calc((100% - 346px)/2);
     color: var(--custom-font-color);
+}
+
+@media (max-width:800px){
+    footer.container{
+        text-align: center;
+        border-top: 2px solid var(--custom-font-color);
+        width: 346px;
+        margin-left: calc((100% - 246px)/2);
+        color: var(--custom-font-color);
+    }
 }

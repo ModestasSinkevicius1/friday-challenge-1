@@ -5,8 +5,13 @@
     --custom-font-color:#02577A;
 }
 
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
 body{
     margin: 0;
-    font-family: sans-serif;
+    font-family: Montserrat;
     background-color: var(--primary-color);
 }
