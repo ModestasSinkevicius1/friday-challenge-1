@@ -1,25 +1,78 @@
 .main-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 159px);
+    grid-template-rows: repeat(4, 1fr);
     margin-left: 100px;
 }
 
 .main-container>div{
     background-color: white;
     border-radius: 25px;
-    margin-top: 49px;
+    margin-top: 25px;
     margin-right: 57px;
     padding: 26px 42px;
 }
 
-.main-container>.item-left-1, 
-.main-container>.item-left-2, 
-.main-container>.item-left-3,
-.main-container>.item-left-4
+.main-container>.item
 {
     grid-column: 1;
     margin-left: 57px;
+    position: relative;
+    
+}
+
+.main-container>.item>img
+{
+    position: absolute;
+    top: 0px;
+    right: 23px;
+    width: 29px;
+    height: 29px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.expander-block
+{
+    background-color: white;
+    box-shadow: 1px 1px 2px black;
+    border-radius: 25px;
+    width: 80px;
+    
+    position: absolute;
+    z-index: 1;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+    right: 5px;
+    display: none;
+}
+
+.main-container>.item>img:hover
+{
+    background-color: var(--element-color);
+    cursor: pointer;
+}
+
+.main-container>.item>img:hover + .expander-block
+{
+    display: block;
+}
+
+.expander-block:hover
+{
+    display: block;
+}
+
+.expander-block p:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-container>.item>p
+{
+    margin-bottom: 18px;
+    color: var(--element-color); 
 }
 
 .main-container>.item-left-4{
@@ -31,7 +84,6 @@
     background-color: var(--custom-font-color);
     color: white;
     padding: 0;
-    
 }
 
 .main-container>.item-left-4>h2{
@@ -53,7 +105,7 @@
 .item-right>.calendar-name-container>h2{
     display: inline-block;
     text-align: center;
-    width: 25%;
+    width: 30%;
     margin: 0;
 }
 
@@ -99,6 +151,14 @@
     border-radius: 999px;
 }
 
+.day.grayed-out{
+    color: var(--element-color);
+}
+
+.day.grayed-out:hover{
+    color: black;
+}
+
 .day:hover{
     background-color: var(--element-color);
     cursor: pointer;
@@ -118,6 +178,13 @@
 
 .main-container>div>h2{
     font-size: 26px;
+}
+
+.main-container>div>p{
+    width: 50%;
+    display: inline-block;
+    margin: 0;
+    color: var(--element-color); 
 }
 
 .main-container>div>img{
@@ -161,9 +228,46 @@
     }
     .main-container>.item-right{
         grid-column: 1;
-        margin-left: 57px;
+        margin-left: 13px;
+        margin-right: 13px;
     }
+    .main-container>.item{
+        margin-left: 13px;
+        margin-right: 13px;
+        align-self: center;
+    }
+    .main-container>div{
+        padding-top: 8px;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .main-container>.item-left-1,
+    .main-container>.item-left-2
+    {
+        margin-top: 0;
+    }
+
     .main-container>.item-left-4{
-        justify-content: flex-end;
+        justify-self: flex-end;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 25px;
+    }
+    
+    .item-right>.calendar-name-container>h2 {        
+        width: 35%;
+    }
+    .main-container>.item>p
+    {
+        margin-bottom: 13px;
+    }
+    .main-container>.item::after{  
+        width: 147px;
+        height: 13px;
+    }
+    .main-container>.item>img
+    {
+        top: -15px;
     }
 }

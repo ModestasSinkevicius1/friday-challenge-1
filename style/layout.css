@@ -1,6 +1,7 @@
 .nav-container{
     box-shadow: 1px 0px 2px #0002;
     overflow: hidden;
+    z-index: 1;
 }
 
 .nav-container, .nav-line, .nav-link, .nav-point{
@@ -15,6 +16,10 @@
 
 .nav-point{
     width: 25px;
+}
+
+.nav-link.home .nav-point{
+    filter: invert(90%) sepia(16%) saturate(5471%) hue-rotate(168deg) brightness(98%) contrast(98%);
 }
 
 .nav-img-4{
